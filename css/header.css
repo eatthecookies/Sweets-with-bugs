@@ -1,0 +1,88 @@
+header{
+    grid-area: header;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+}
+header::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #FFDEAD;
+    z-index: 2;
+}
+.header_body{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.header_section1{
+   display: flex;
+   align-items: center;
+}
+.header_section2{
+    display: flex;
+    align-items: center;
+ }
+header img{
+    position: relative;
+    z-index: 3;
+    height: 75px;
+    margin-left: 10px;
+}
+h1{
+    position: relative;
+    z-index: 3;
+    font-size: 2.0rem;
+}
+header nav{
+    z-index: 2;
+    position: relative;
+    display: flex;
+}
+/*меню бургер*/
+#menu-toggle {
+    display: none;
+}
+/*меню*/
+
+header ul{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+header ul li a{
+    display:block;
+    padding: 30px 20px ;
+    font-size: 1.2rem;
+    color: black;
+}
+
+header ul li a:hover{
+    background: #DEB887;
+    transition: 0.5s;
+}
+header ul li a:active{
+    background:#D2691E;
+}
+
+@media only screen and (min-width: 2000px) {
+    .header_body{
+        height: 120px;
+    }
+
+    header ul{
+        height: 120px;
+    }
+    header ul li a{
+        padding: 45px 30px ;
+        
+    }
+}

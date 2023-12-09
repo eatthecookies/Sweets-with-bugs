@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    padding: 0;
+    margin: 0;
+    background: #FFF8DC;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding-top: 80px;
+    margin: 20px 30px;
+}
+
+aside{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto); 
+    gap: 10px;
+    align-self: start; 
+    margin-left: 20px;
+}
+
+aside img{
+    padding-bottom: 10px;
+    padding-top: 5px;
+    width: 100%;
+}
+aside h2{
+    padding-bottom: 0px;
+    text-align: center;
+}
+aside p{
+    padding-top:10px;
+    font-size: 1.1em;
+}
+
+.map, .video{
+    overflow:hidden;
+}
+
+footer a{
+    color: black;
+}
+
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    background: #DEB887;
+    transition: all 0.5s;
+}
+
+footer .cont{
+    margin: 10px 20px;
+}
+.cont h2{
+    padding-bottom: 2px;
+}
+
+.cont p{
+    padding: 5px 0px;
+}
+
+  
+  footer .cont .boba:hover::before {
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid black; /* Цвет стрелки */
+    transition: all 0.2s ease;
+  }
+
+  /*Галерея изображений*/
+
+.image-gallery {
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.image-gallery .column { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+} 
+    
+.column img { 
+    width: 100%; 
+    height: 100%; 
+}
+
+/*Карточки изображений*/
+
+.effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(100%);
+}
+
+
+.effect:hover::before {
+    transform: translateY(0px);
+    visibility: visible;
+}
+
+.effect .info{
+    transition: all 0.4s ease-in-out;
+    transform: translateY(100%);
+    color: white;
+    margin-left: 10px;
+    position: absolute;
+    top: 30%;
+    left: 0px;
+    visibility: hidden;
+}
+
+.effect .info a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    margin-top: 5px;
+    width: 50%;
+    color: #fff;
+    background: #000;
+    border-radius: 5px;
+}
+
+.effect:hover .info{
+    transform: translateY(0px);
+    visibility: visible;
+}
+
+
+
+/*кнопки*/
+
+
+/*Кнопка sibmit*/
+.sb{
+    padding: 10px 5px;
+    background: #000;
+    border:0;
+    color: black;
+    position: relative;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    display: block;
+  }
+ .sb::after,
+  .sb::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition:all .4s ease-in-out;
+  }
+  .sb::after{
+      width: 30px;
+      height: 1px;
+      background: black;
+      transform: translateX(-3px);
+      margin-top: 0px;
+  }
+  
+  .sb::before{
+      content: "";
+      transform: rotate(-135deg) translateX(50%);
+      width: 11px;
+      height: 11px;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+  }
+  
+  
+  .sb:hover{
+    padding: 10px 60px 10px 10px;
+  }
+  
+  .sb:hover::after,
+  .sb:hover::before{
+    opacity: 1;
+    right: 15px;
+  }
+
+
+  /*Карточки изображений*/
+
+  .effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(100%);
+}
+
+
+.effect:hover::before {
+    transform: translateY(0px);
+    visibility: visible;
+}
+
+.effect .info{
+    transition: all 0.4s ease-in-out;
+    transform: translateY(100%);
+    color: white;
+    margin-left: 10px;
+    position: absolute;
+    top: 30%;
+    left: 0px;
+    visibility: hidden;
+}
+
+.effect .info a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    margin-top: 5px;
+    width: 50%;
+    color: #fff;
+    background: #000;
+    border-radius: 5px;
+}
+
+.effect:hover .info{
+    transform: translateY(0px);
+    visibility: visible;
+}
+.info .tobasket{
+    background-color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top:5px;
+    border: none;
+}
+
+
+/* кнопка уведомлений*/
+
+
+
+/*соц сети*/
+.social{
+    flex-wrap: wrap;
+}
+.social .fa {
+    margin-top: 10px;
+    padding-top: 12px;
+    width: 50px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+    position: relative;
+    transition: all .35s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.social .fa:before{
+    font-size:25px;
+    position: relative;
+    z-index: 2;
+}
+.social .fa::after{
+    position: absolute;
+    z-index: 1;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#cfecd0, #ffc5ca);
+    transition: all 0.5s;
+}
+  
+.social .fa:hover::after{
+    height: 100%;
+}
+
+section h2{
+    padding-bottom: 5px;
+}
+section{
+    margin: 10px;
+}
+
+  /*Крутые карточки*/
+
+  .Container1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    text-align: center;
+    background: white;
+    height: 300px;
+    width: 250px;
+    margin: 15px 20px;
+    border-radius:15px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.card h2{
+    padding-top: 30px;
+    background-color: #F4A460;
+    height: 50px;
+    border-radius: 0 0 50% 50%; 
+}
+.card p{
+    padding: 20px 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.card a{
+    background-color: #F4A460;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    margin: 20px 60px;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+  
+  .wrapper12{
+    display: flex;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .wrapper12 p{
+    margin-top: 20px;
+  }
+.btn{
+    background: transparent;
+    font-size: 40px;
+    color:grey;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+.btn i:hover{
+    cursor: pointer;
+}

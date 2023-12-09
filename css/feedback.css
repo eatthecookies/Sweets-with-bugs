@@ -1,0 +1,89 @@
+/*форма регистрации и отзывов*/
+
+
+main{
+    grid-template-columns: repeat(1,650px);
+    justify-content: center;
+}
+form{
+    background-color: rgb(239, 226, 202);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,auto);
+    place-items:center;
+    justify-items:start;
+    gap: 10px 30px;
+    padding: 10px 30px;
+    overflow: hidden;
+}
+form h2{
+    grid-column: span 2;
+    justify-self:center;
+}
+form .comment{
+    grid-column: span 2;
+    width: 100%;
+}
+
+form div{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+input{
+    background-color:#DEB887; 
+    cursor: pointer;
+    height: 0;
+    outline: none;
+    border: none; /* Удаляем границу по умолчанию */
+    border-bottom: 2px solid transparent; /* Добавляем нижнюю границу */
+    transition: all 0.3s; /* Добавляем анимацию transform */
+}
+::placeholder{
+    color:white;
+}
+input:focus{
+    height: 25px;
+    transform: translateY(5px);
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    background-color:#DEB887; 
+    cursor: pointer;
+    height: 0;
+    outline: none;
+    border: none; /* Удаляем границу по умолчанию */
+    border-bottom: 2px solid transparent; /* Добавляем нижнюю границу */
+    transition: all 0.5s; /* Добавляем анимацию transform */
+}
+
+textarea:focus{
+    height: 80px;
+    transform: translateY(5px);
+}
+
+form .sb{
+    background-color: #DEB887;
+}
+
+@media only screen and (max-width: 713px){ 
+    form{
+        grid-template-columns: repeat(1,auto);
+    }
+    form h2{
+        grid-column: 1;
+    }
+    form .comment{
+        grid-column: 1;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    form{
+      width: 700px;
+    }
+ }
