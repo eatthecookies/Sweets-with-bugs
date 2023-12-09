@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--определяем язык страницы-->
+<html lang="ru">
+    <!--головной раздел-->
+ <head>
+        <!--устанавливем кодировку-->
+    <meta charset="UTF-8">
+    <!--Атрибут name со значением viewport  контролирует масштаб отображения страницы на
+    устройствах.
+    Атрибут content со значениями width=device-width и
+    initial-scale=1.0 задает ширину видимой области равной
+    ширине устройств при отсутствии изначального масштабирования. -->
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <!--заголовок-->
+    <title>Магазин сладостей</title>
+    <!--фавиконка-->
+    <link rel="icon" type="image/png" href="images/logo3.png">
+    <!--подключаем стили css-->
+    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ </head>
+ <body>
+  <header>
+    <div class="header_body">
+    <div class = "header_section1"> 
+        <!-- Логотип-->
+        <a href="index.html"><img src="images/logo3.png"> </a>
+        <!-- Основной заголовок-->
+        <a href="index.html"><h1>Магазин сладостей</h1> </a>
+    </div>
+    <!--меню-->
+</div>
+</header>
+    <main>
+        <form method="post" action="">
+            <h2> Регистрация</h2>
+            <div>
+              <input type="text" name="name" id = "name" placeholder="Ваше имя">
+            </div>
+
+              <div>
+              <input type="email" name="email" id = "email" required placeholder="Ваш e-mail">
+            </div>
+            <div>
+                
+                <input type="tel" name="number" id = "number" pattern = "+7[0-9]{10}" placeholder="Ваш номер телефона" minlength="11">
+              </div>
+            <div >
+                
+                <input name="pass-first" type="password" id="Password" min="6" required placeholder="Придумайте пароль">
+            </div>
+          
+            <div class="button">
+              <input type="submit"></input> 
+          </div>
+
+          <div >
+            <p> <a href="input.html">Вход</a></p>
+         </div>
+          </form> 
+    </main>
+  
+</body>

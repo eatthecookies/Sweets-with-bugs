@@ -1,0 +1,177 @@
+<!--Определяет версию HTML, используемую в документе. В данном
+случае это HTML5.-->
+<!DOCTYPE html>
+<!--определяем язык страницы-->
+<html lang="ru">
+    <!--головной раздел-->
+ <head>
+        <!--устанавливем кодировку-->
+    <meta charset="UTF-8">
+    <!--Атрибут name со значением viewport  контролирует масштаб отображения страницы на
+    устройствах.
+    Атрибут content со значениями width=device-width и
+    initial-scale=1.0 задает ширину видимой области равной
+    ширине устройств при отсутствии изначального масштабирования. -->
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <!--заголовок-->
+    <title>Магазин сладостей</title>
+    <!--фавиконка-->
+    <link rel="icon" type="image/png" href="images/logo3.png">
+    <!--подключаем стили css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script/script.js"></script>
+ </head>
+
+ <!--тело сайта-->
+ <body>
+
+    <!--header-->
+    <header>
+        <div class="header_body">
+        <div class = "header_section1"> 
+            <!-- Логотип-->
+            <a href="index.html"><img src="images/logo3.png"> </a>
+            <!-- Основной заголовок-->
+            <a href="index.html"><h1>Магазин сладостей</h1> </a>
+        </div>
+        <div class="header_section2">
+            <input id="menu-toggle" type="checkbox">
+            <label class="burger_label" for="menu-toggle">
+            <span></span>
+            </label>
+        <!--меню-->
+        <nav class ="menu">
+            <ul >
+                <li> <a href="#contact"> Контакты </a></li>
+                <li> <a href="basket.html"> Корзина</a></li>
+                <li> <a href="input.html"> Вход </a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <!--основной контент-->
+    <main>
+        <article>
+            <section>
+                <h2 class = "section">Европейские сладости</h2>
+                <p>
+                    Добро пожаловать в наш уголок волшебства, где европейская сладкая традиция оживает в каждом вкусе. С этой страницы начнется ваше путешествие по разнообразным и удивительным мирам европейских сладостей, где в каждой конфете, в каждом пироженом звучит история старых городов, теплота домашних кухонь и настоящее искусство создания великолепных десертов. От французских деликатесов до итальянских шедевров — здесь каждая сладость становится поистине уникальным путеводителем в мир европейского сладкого наследия. Позвольте себе окунуться в атмосферу вкуса и стиля, которые делают европейские сладости неотъемлемой частью кулинарного наследия старого континента. Приготовьтесь к гастрономическому приключению, где каждый сладкий момент — это встреча с настоящим волшебством вкуса!
+                </p>
+            </section>
+            <section>
+                <div class = "container">
+                    <h2>Ассортимент</h2>
+                    <div class="image-gallery">
+                        <div class="column">
+                            <div class="effect">
+                                <img src="images/e1.png">
+                                <div class="info">
+                                    <h3>Сладости из Франции</h3>
+                                    <p>Новые вкусы легендарных конфет</p>
+                                    <p>Цена: 800р</p>
+                                    <button class="tobasket" onclick="addToCartFromInfoDiv(this)">
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div> 
+                            <div class="effect ef2">
+                                <img src="images/e2.png">
+                                <div class="info">
+                                    <h3>Сладости из Германии </h3>
+                                    <p>Набор вкусных конфет</p>  
+                                    <p>Цена: 1500р</p>
+                                    <button class="tobasket" onclick="addToCartFromInfoDiv(this)">
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="column">
+                            <div class="effect">
+                                <img src="images/e3.png">
+                                <div class="info">
+                                    <h3>Сладости из Англии</h3>
+                                    <p>Набор вкусных конфет</p>  
+                                    <p>Цена: 2000р</p>
+                                    <button class="tobasket" onclick="addToCartFromInfoDiv(this)">
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div>
+                        
+                            <div class="effect">
+                                <img src="images/e4.png">
+                                <div class="info">
+                                    <h3>Сладости из Италии </h3>
+                                    <p>Набор вкусных конфет</p>  
+                                    <p>Цена: 1100р</p>
+                                    <button class="tobasket" onclick="addToCartFromInfoDiv(this)">
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+    </article>
+    <aside>
+        <h2>Акции</h2>
+        <div class="action">
+            <p>Только в этом месяце 2 коробки конфет по цене 4-х</p>
+            <img src="images/sale.png">
+        </div>
+        <div class="action">
+            <p>Скидка на наборы сладостей</p>
+            <img src="https://i.ebayimg.com/00/s/MTQ2MFgxNjAw/z/sTQAAOSw37tWCndx/$_57.JPG?set_id=880000500F">
+        </div>
+    </aside>
+</main>
+
+<!-- footer-->
+<footer>
+    <div class="cont">
+        <h2>Почему мы?</h2>
+        
+        <p> В нашем магазине вы найдете лучшие сладости со всех уголков мира. Мы гордимся своим уникальным ассортиментом, внимательным отношением к качеству и стремлением подарить вам истинное наслаждение от каждого укуса. Добро пожаловать в наш сладкий уголок, где каждая сладость — это маленький кусочек волшебства!</p>
+    </div>
+    <div class="cont">
+        <h2> Быстрые ссылки</h2>
+        <div>
+            <p><a href="#" class="boba">В начало</a></p>
+            <p><a href="feedback.html" class="boba"> Написать отзыв</a></p>
+        </div>
+    </div>
+    <div class="cont">
+        <h2>Соцсети</h2>
+
+        <p>Подпишись на нас,чтобы не пропустить самое интересное</p>
+        <div class="social">
+            <a href="https://web.telegram.org/" class="fa fa-telegram"></a>
+            <a href="https://vk.com/id239982327" class="fa fa-vk"></a>
+            <a href="https://www.youtube.com/" class="fa fa-youtube-play"></a>
+        </div>
+    </div>
+    <div class="cont">
+        <h2 id="contact">Контакты</h2>
+        
+        <!-- контактная информация-->
+        <adress>
+            <!-- ссылка на номер телефона-->
+            <p><a href="tel:8800553535">8800553535</a></p>
+            <!-- ссылка на почту-->
+            <p><a href="mailto:sendemail@gmail.com">sendemail@gmail.com</a></p>
+            <p>г. Москва, пр. Вернадского, д. 78</p>
+        </adress>
+    </div>
+</footer>
+</body>
+</html>

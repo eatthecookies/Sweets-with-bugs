@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--определяем язык страницы-->
+<html lang="ru">
+    <!--головной раздел-->
+ <head>
+        <!--устанавливем кодировку-->
+    <meta charset="UTF-8">
+    <!--Атрибут name со значением viewport  контролирует масштаб отображения страницы на
+    устройствах.
+    Атрибут content со значениями width=device-width и
+    initial-scale=1.0 задает ширину видимой области равной
+    ширине устройств при отсутствии изначального масштабирования. -->
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <!--заголовок-->
+    <title>Магазин сладостей</title>
+    <!--фавиконка-->
+    <link rel="icon" type="image/png" href="images/logo3.png">
+    <!--подключаем стили css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ </head>
+ <body>
+
+    <!--header-->
+    <header>
+        <div class="header_body">
+        <div class = "header_section1"> 
+            <!-- Логотип-->
+            <a href="index.html"><img src="images/logo3.png"> </a>
+            <!-- Основной заголовок-->
+            <a href="index.html"><h1>Магазин сладостей</h1> </a>
+        </div>
+        <!--меню-->
+    </div>
+    </header>
+    <main>
+        <form method="post" action="">
+            
+            <h2>Отзыв</h2>
+            <div>
+                <label for="name">Имя</label>
+                <input type="text" name="name" id = "name" placeholder="Ваше имя">
+            </div>
+            <div>
+                <label for="number">Телефон</label>
+                <input type="tel" name="number" id = "number" pattern = "+7[0-9]{10}" placeholder="Ваш номер телефона" minlength="11">
+            </div>
+            <div>
+                <label for="email">Почта</label>
+                <input type="email" name="email" id = "email" required placeholder="Ваш e-mail">
+            </div>
+            <div>
+                <label for="date">Дата заказа </label>
+                <input type="datetime-local" id="date" name="date">
+            </div>
+            <div class="comment">
+                <label for="comment"> *Напишите ваше мнение об этом товаре</label>
+			    <textarea rows="10" cols="30" minlength="5" name="comment" id="comment" required></textarea>
+            </div>
+            <button type="submit" class="sb">Отправить</button> 
+        </form>
+    </main>
+
+</body>
+</html>
