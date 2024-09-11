@@ -5,11 +5,11 @@ const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 // Отображаем товары из корзины на странице корзины
 const cartElement = document.getElementById('cart');
 
-cartItems.forEach(item => {
+cartItems.forEach(item => {    
     const cartItemElement = document.createElement('div');
     cartItemElement.className = 'item';
     cartItemElement.innerHTML = `
-        <div class="image">
+        <div class="image"> 
             <img src="${item.image}">
         </div>
         <div class="details">
@@ -23,7 +23,7 @@ cartItems.forEach(item => {
                 <i class="fa fa-plus" onclick="changeQuantity('${item.name}', 1)"></i>
             </div>
             <div class="price">
-                <p>${item.price}</p>
+                <p>${Math.floor(Math.random() * (3000 - 200) + 200)}</p>
             </div>
             <div class="corsina">
                 <i class="fa fa-trash" onclick="removeItem('${item.name}')"></i>
@@ -42,7 +42,7 @@ function changeQuantity(itemName, change, clickedElement) {
     var totalPrice;
     if (cartItem) {
         // Проверяем, что количество товаров больше 1 перед уменьшением
-        if (cartItem.quantity > 1 || change > 0) {
+        if (cartItem.quantity > -100 || change > 0) {
             cartItem.quantity += change;
             totalPrice =  (parseInt(cartItem.price.replace('р', '')) / oldQuantity ) * cartItem.quantity;
         }else {
@@ -63,7 +63,7 @@ function toggleMinusButton(quantity, minusButton) {
     if (quantity > 1) {
         minusButton.disabled = false;
     } else {
-        minusButton.disabled = true;
+        minusButton.disabled = false;
     }
 }
 // Функция для удаления товара из корзины

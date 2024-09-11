@@ -49,9 +49,8 @@ function addToCart(itemImage, itemName, itemDescription, itemPrice) {
         name: itemName,
         description: itemDescription,
         price: itemPrice,
-        quantity: 1
+        quantity: 2
     };
-   
     // Получаем текущий массив корзины из localStorage
     var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 

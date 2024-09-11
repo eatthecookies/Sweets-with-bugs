@@ -60,6 +60,9 @@ footer a{
     color: black;
 }
 
+.card > a{
+    cursor: pointer;
+}
 footer{
     grid-area: footer;
     display: grid;
